@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <transition :name="transitionName">
-        <router-view></router-view>
+      <router-view></router-view>
     </transition>
   </div>
 </template>
 <script>
 export default {
-  name:'app',
-   data() {
+  name: 'app',
+  data() {
     return {
       transitionName: "slide-right"
     };
@@ -24,14 +24,32 @@ export default {
   },
 }
 </script>
-<style lang="less">
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:active {
+    color: #000;
+  }
+}
+
+html, body, #app {
+  height: 100%;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
+
 .slide-left-enter,
 .slide-right-leave-active {
   opacity: 0;

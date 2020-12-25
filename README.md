@@ -1,4 +1,4 @@
-# vant-template
+# vue-template
 
 ## Project setup
 ```

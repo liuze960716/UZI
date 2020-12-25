@@ -16,7 +16,7 @@
 import Vue from 'vue'
 import {ImagePreview} from 'vant';
 
-import {mockGetApi, mockPostApi} from '../../request/api';
+import {mockGetApi, mockPostApi} from '../../request/api.js';
 
 Vue.use(ImagePreview);
 export default {
