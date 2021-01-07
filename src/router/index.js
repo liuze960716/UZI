@@ -3,45 +3,55 @@ import VueRouter from 'vue-router'
 /*
   路由统一使用懒加载
 */
-const Home = ()=> import('../views/Home');
-const Calculator = ()=> import('../views/Calculator');
-const test = ()=> import('../views/test/test')
+const Home = () => import('../views/Home');
+const Calculator = () => import('../views/Calculator');
+const test = () => import('../views/test/test')
+const stickySlot = () => import('../views/stickySlot')
 
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'test',
-    component: test,
-    meta:{
-      index:0,
-      name:'测试'
+    {
+        path: '/',
+        name: 'test',
+        component: test,
+        meta: {
+            index: 0,
+            name: '测试'
+        }
+    },
+    {
+        path: '/Home',
+        name: 'Home',
+        component: Home,
+        meta: {
+            index: 1,
+            name: '用户注册'
+        }
+    },
+    {
+        path: '/calculator',
+        name: 'Calculator',
+        component: Calculator,
+        meta: {
+            index: 2,
+            name: '我的'
+        }
+    },
+    {
+        path:'/stickySlot',
+        name:'stickySlot',
+        component:stickySlot,
+        meta: {
+            index: 3,
+            name: '吸顶'
+        }
     }
-  },
-  {
-    path: '/Home',
-    name: 'Home',
-    component: Home,
-    meta:{
-      index:1,
-      name:'用户注册'
-    }
-  },
-  {
-    path: '/calculator',
-    name: 'Calculator',
-    component: Calculator,
-    meta:{
-      index:2,
-      name:'我的'
-    }
-  }
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
