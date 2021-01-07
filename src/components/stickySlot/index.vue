@@ -74,6 +74,7 @@ export default {
 .sticky {
   width: 100%;
 }
+
 .sticky .sticky-warp {
   width: 100%;
   background: inherit;
