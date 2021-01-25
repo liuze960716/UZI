@@ -5,15 +5,16 @@ import VueRouter from 'vue-router'
 */
 const Home = () => import('../views/Home');
 const Calculator = () => import('../views/Calculator');
-const test = () => import('../views/test/test')
-const stickySlot = () => import('../views/stickySlot')
+const test = () => import('../views/test/test');
+const stickySlot = () => import('../views/stickySlot');
+const demo = () => import('../views/demo');
 
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/test',
         name: 'test',
         component: test,
         meta: {
@@ -46,6 +47,15 @@ const routes = [
         meta: {
             index: 3,
             name: '吸顶'
+        }
+    },
+    {
+        path:'/',
+        name:'demo',
+        component:demo,
+        meta: {
+            index: 4,
+            name: '案例'
         }
     }
 ]
