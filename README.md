@@ -1,4 +1,4 @@
-# vue-template
+# Uzi
 
 ## Project setup
 ```
