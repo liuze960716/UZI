@@ -8,6 +8,8 @@ const Calculator = () => import('../views/Calculator');
 const test = () => import('../views/test/test');
 const stickySlot = () => import('../views/stickySlot');
 const demo = () => import('../views/demo');
+const player = () => import('../views/videoPlayer/Player');
+const dragAndDrop = () => import('../views/dragAndDrop');
 
 
 Vue.use(VueRouter)
@@ -50,12 +52,30 @@ const routes = [
         }
     },
     {
-        path:'/',
+        path:'/demo',
         name:'demo',
         component:demo,
         meta: {
             index: 4,
             name: '案例'
+        }
+    },
+    {
+        path:'/',
+        name:'player',
+        component:player,
+        meta: {
+            index: 4,
+            name: '视频'
+        }
+    },
+    {
+        path:'/dragAndDrop',
+        name:'dragAndDrop',
+        component:dragAndDrop,
+        meta: {
+            index: 4,
+            name: '视频'
         }
     }
 ]
